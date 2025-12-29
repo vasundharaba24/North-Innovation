@@ -1,0 +1,21 @@
+# Responsiveness Fixes
+
+- [ ] Update HeroSection.jsx: Make layout stack on mobile, responsive thumbnails, add sm: font sizes
+- [ ] Update Header.jsx: Responsive padding, add mobile menu
+- [ ] Update CategorySection.jsx: Responsive grid, remove fixed height
+- [ ] Update Footer.jsx: Check and fix responsiveness
+- [ ] Update ExploreSection1.jsx: Responsive layout
+- [ ] Update ExploreSection2.jsx: Responsive layout
+- [ ] Update ExploreSection3.jsx: Responsive layout
+- [ ] Update DifferentiatorsSection.jsx: Responsive layout
+- [ ] Update ReviewSection.jsx: Responsive layout
+- [ ] Update Contact.jsx: Responsive layout
+- [ ] Update AboutUsSection.jsx: Responsive layout
+- [ ] Update Review.jsx: Responsive layout
+- [ ] Update InfoSection.jsx: Responsive layout
+- [ ] Update LogoMarquee.jsx: Responsive layout
+- [ ] Update TrustedBrands.jsx: Responsive layout
+- [ ] Update Carousel.jsx: Responsive layout
+- [ ] Update LoginPage.jsx: Responsive layout
+- [ ] Update Explore.jsx page: Responsive layout
+- [ ] Test on different screen sizes
