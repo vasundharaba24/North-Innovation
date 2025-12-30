@@ -6,8 +6,6 @@ const Header = () => {
     return (
         <div>
             {/* Top Banner */}
-            
-
             {/* Header */}
             <header className="bg-stone-50 border-b border-stone-200 sticky top-0 z-50 shadow-sm">
                 <div className="max-w-7xl mx-auto px-6 ">
