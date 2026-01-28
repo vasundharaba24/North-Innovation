@@ -11,34 +11,9 @@ import conference from '../assests/conference.png'
 export default function ExploreSection2() {
   return (
     <div className="w-full bg-white font-light">
-       <section className="pb-10 pt-0">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-sm font-medium tracking-widest text-slate-600 mb-4">
-              HAVE A LOOK AT
-            </p>
+    
 
-            <h2
-              className="text-5xl md:text-6xl font-light text-slate-800 mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >     
-                Corporate Gifting Essentials
-            </h2>
-
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8"></div>
-
-            {/* <p
-              className="text-xl text-slate-600 max-w-3xl mx-auto"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              Every detail considered. Every choice deliberate.
-              Let’s create something that reflects discernment, quality, and quiet confidence.
-            </p> */}
-          </div>
-        </div>
-      </section>
-
-      <div className="max-w-7xl mx-auto px-8 py-24 space-y-28">
+      <div className="max-w-7xl mx-auto px-8 space-y-28">
 
         {/* ROW 1 — Image Left */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -51,10 +26,11 @@ export default function ExploreSection2() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-serif text-gray-800 mb-4">
+            <h3 className="text-3xl font-serif text-gray-800 mb-4"   style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Custom Apparel
             </h3>
-            <p className="text-gray-600 leading-relaxed max-w-md">
+            <p className="text-gray-600 leading-relaxed max-w-md"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Premium, thoughtfully curated apparel designed to represent your brand with quiet confidence.
               <br /><br />
               <b>Includes:</b> High-quality T-shirts, polos, shirts & hoodies, subtle logo embroidery or clean branding, brand-aligned colors & refined fits, comfortable and durable fabrics, optional eco-friendly materials, premium minimal packaging.
@@ -67,10 +43,12 @@ export default function ExploreSection2() {
         {/* ROW 2 — Image Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 className="text-3xl font-serif text-gray-800 mb-4">
+            <h3 className="text-3xl font-serif text-gray-800 mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Workspace Essentials
             </h3>
-            <p className="text-gray-600 leading-relaxed max-w-md">
+            <p className="text-gray-600 leading-relaxed max-w-md"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Curated workspace essentials designed to elevate everyday work with function and refined aesthetics.
               <br /><br />
               <b>Includes:</b> Premium notebooks & pens, desk organizers & minimal accessories, laptop sleeves & work pouches, bottles, mugs & desk utilities, brand-aligned colors with subtle branding, clean premium packaging.
@@ -99,10 +77,12 @@ export default function ExploreSection2() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-serif text-gray-800 mb-4">
+            <h3 className="text-3xl font-serif text-gray-800 mb-4 font-semibold"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Tech & Gadgets
             </h3>
-            <p className="text-gray-600 leading-relaxed max-w-md">
+            <p className="text-gray-600 leading-relaxed max-w-md text-lg"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }} >
               Smart, functional devices curated to support modern workstyles with precision and ease.
               <br /><br />
               <b>Includes:</b> Wireless mice & keyboards, noise-cancelling headphones, power banks & fast chargers, USB-C hubs, Bluetooth speakers, smart productivity accessories, subtle brand customization, premium protective packaging.
@@ -115,10 +95,12 @@ export default function ExploreSection2() {
         {/* ROW 4 — Image Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 className="text-3xl font-serif text-gray-800 mb-4">
+            <h3 className="text-3xl font-serif text-gray-800 mb-4 font-semibold"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Festive Hampers
             </h3>
-            <p className="text-gray-600 leading-relaxed max-w-md">
+            <p className="text-gray-600 leading-relaxed max-w-md text-lg"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Thoughtfully curated festive hampers designed to celebrate moments with warmth, culture, and elegance.
               <br /><br />
               <b>Includes:</b> Traditional sweets & delicacies, premium dry fruits, festive décor accents, regional specialties, custom notes & festive packaging, brand-aligned presentation.
@@ -147,10 +129,12 @@ export default function ExploreSection2() {
           </div>
 
           <div>
-           <h3 className="text-3xl font-serif text-gray-800 mb-4">
+           <h3 className="text-3xl font-serif text-gray-800 mb-4 font-semibold"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Conference & Event Kits
           </h3>
-          <p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-md"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Curated essentials designed to create a seamless and memorable experience at conferences, seminars, and brand-led events.
             <br /><br />
 

@@ -7,6 +7,8 @@ import './styles/main.css';
 import Explore from './pages/Explore';
 import Contact from './components/Contact';
 import LoginPage from './components/LoginPage';
+import NShapeCards from './components/NShapeCards.jsx';
+import PhotoGallery from './components/PhotoGallery.jsx';
 const App = () => {
     return (
         <Router>
@@ -17,6 +19,8 @@ const App = () => {
                     <Route path="/explore" element={<Explore />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/nshapecards" element={<NShapeCards />} />
+                    <Route path='/gallery' element={<PhotoGallery/>}></Route>
                 </Routes>
             </div>
         </Router>

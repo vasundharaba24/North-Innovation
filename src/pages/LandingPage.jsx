@@ -8,6 +8,7 @@ import Review from '../components/Review';
 import InfoSection from '../components/InfoSection';
 import DifferentiatorsSection from '../components/DifferentiatorsSection';
 import LogoMarquee from '../components/LogoMarquee';
+import NShapeCards from '../components/NShapeCards';
 
 const LandingPage = () => {
     return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
             <Header />
                 <HeroSection />
                 <LogoMarquee />
+                <NShapeCards />
                 <CategorySection />
                 <Review />
                 <DifferentiatorsSection />

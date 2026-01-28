@@ -1,5 +1,5 @@
 import React from 'react';
-import video from '../assests/Robot.mp4';
+// import video from '../assests/Robot.mp4';
 
 function LoginPage() {
   return (
@@ -7,7 +7,7 @@ function LoginPage() {
      <div className="relative w-full md:w-[55%] flex items-center justify-center p-4 md:p-0 min-h-[40vh] md:min-h-screen overflow-hidden">
         {/* Background Video */}
         <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
-          <source src={video} type="video/mp4" />
+          <source type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

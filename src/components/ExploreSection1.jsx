@@ -1,5 +1,6 @@
 import React from "react";
 import art from '../assests/art.jpg'
+import { Link } from "react-router-dom";
 
 export default function ExploreSection1() {
   return (
@@ -16,29 +17,24 @@ export default function ExploreSection1() {
             className="w-full h-full object-cover"
             />
         </div>
-
-
         </div>
-
 
         {/* Right Content */}
         <div className="lg:w-1/2 text-center lg:text-left lg:pl-16 pr-16">
-          <p className="text-2xl font-script text-gray-600 mb-6 italic">New in store</p>
-          <h1 className="text-6xl lg:text-7xl font-serif font-light text-gray-900 mb-10 leading-tight tracking-wider text-center">
-          EXPLORE<br />
-          COLLECTION
-          </h1>
-          <button className="border-2 border-gray-800 px-10 py-3 text-sm font-medium tracking-[0.25em] uppercase hover:bg-gray-800 hover:text-white transition-all duration-300">
-            CATALOGUES
-          </button>
+          <p className="text-2xl font-script text-gray-600 mb-6 italic">Moments, Perfectly Curated</p>
+          <h3 className="text-2xl font-serif font-light text-gray-900 mb-10 leading-tight tracking-wider text-center">
+         Turning celebrations into keepsakes, <br></br>one beautiful box at a time.
+          </h3>
+        
         </div>
       </div>
 
       {/* New Arrivals Marquee Strip */}
       <div className="bg-gray-100 py-4 overflow-hidden border-t border-gray-200">
-        <div className="flex animate-marquee whitespace-nowrap">
+        <div className="flex animate-marquee whitespace-nowrap font-semibold"
+         style={{ fontFamily: "'Cormorant Garamond', serif" }}>
           {Array(20)
-            .fill("✦ FRESH FINDS")
+            .fill("✦ CATALOGUES")
             .map((item, index) => (
               <span 
                 key={index} 

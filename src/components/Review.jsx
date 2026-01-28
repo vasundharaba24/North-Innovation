@@ -1,124 +1,203 @@
-import React from 'react';
+import React, { useState } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
-const Review = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: "John D.",
-      title: "Exceptional craftsmanship.",
-      text: "The craftsmanship is top-notch. Every detail is perfect and the attention to detail is outstanding.",
-      image: "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      id: 2,
-      name: "Marcus K.",
-      title: "Outstanding quality and craftsmanship.",
-      text: "Every piece exceeded my expectations. The attention to detail is remarkable and the materials are top-notch quality.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      id: 3,
-      name: "Sarah M.",
-      title: "Transformed our entire home.",
-      text: "The consultation was thorough and professional. Every recommendation was perfect for our space and lifestyle needs.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      id: 4,
-      name: "Emily R.",
-      title: "Incredible attention to detail.",
-      text: "From the initial consultation to final delivery, everything was handled with care. Highly recommend to everyone!",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-    }
-  ];
+// Images
+import slide1 from "../assests/Amex-review.jpg";
+import slide2 from "../assests/Doctorsand-review.jpg";
+import slide3 from "../assests/skytown-review.jpeg";
+import slide4 from "../assests/I2.png";
+
+
+import logoAmex from "../assests/logos/American_express.png";
+import logoDoctor from "../assests/logos/Sodexo.png";
+import logoBrandRaga from "../assests/logos/BrandRaga.png";
+
+
+
+const slidesData = [
+  {
+    bg: slide1,
+    name: "Thara",
+    company: "American Express",
+    logo: logoAmex,
+    review:
+      "End-to-end services from North Curations covering planning, coordination, and execution delivering seamless, engaging, and truly memorable gifting experiences.",
+  },
+  {
+    bg: slide2,
+    name: "Jayaraam Chetan V ",
+    company: "Doctor Sand Limited",
+    logo: logoDoctor,
+    review:
+      "Stellar. Thorough Professional ",
+  },
+  {
+    bg: slide3,
+    name: "Saanvikaa Kabadi",
+    company: "Skytown Group",
+    logo: logoAmex,
+    review:
+      "Excellent service.",
+  },
+  {
+    bg: slide4,
+    name: "Shiv Mamadapur",
+    company: "Brand Raga",
+    logo: logoBrandRaga,
+    review:
+      "Best services, reliable and on time. Its the best experience, the variety of products and the timeline are very on time",
+  },
+];
+
+export default function ReviewSlider() {
+  const [current, setCurrent] = useState(0);
+
+  const prevSlide = () => {
+    setCurrent((prev) =>
+      prev === 0 ? slidesData.length - 1 : prev - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) =>
+      prev === slidesData.length - 1 ? 0 : prev + 1
+    );
+  };
 
   return (
-    <div className="min-h-screen bg-white py-24 px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header - styled like CategorySection */}
-        <div className="text-center mb-20">
-          <div className="mb-6">
-            <p
-              className="text-sm font-medium tracking-widest text-slate-600 mb-4"
-              style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '0.25em' }}
-            >
-              WHAT CLIENTS SAY
-            </p>
-            <h2
-              className="text-5xl md:text-6xl font-light text-slate-800 mb-6"
-              style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.1 }}
-            >
-              Reviews <span className='text-[#AF4110]'>&</span> Experiences
-            </h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8"></div>
-          </div>
-          <p
-            className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+    <div className="animate-[fadeUp_0.8s_ease-out]">
+      {/* HEADER */}
+      <div className="text-center mb-20 mt-20 px-6">
+        <p
+          className="text-sm font-medium tracking-widest text-slate-600 mb-4"
+          style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.25em" }}
+        >
+          WHAT CLIENTS SAY
+        </p>
+
+        <h2
+          className="text-5xl md:text-6xl font-light text-slate-800 mb-6"
+          style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.1 }}
+        >
+          The North Experience
+        </h2>
+
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8" />
+
+        <p
+          className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          From first glance to final unwrapping, our clients share their journey
+          of thoughtful, luxurious gifting.
+        </p>
+      </div>
+
+      {/* SLIDER */}
+      <section className="w-full bg-white animate-[fadeUp_1s_ease-out]">
+        <div className="relative w-full overflow-hidden">
+          {/* SLIDES */}
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            Discover how our curated collections have transformed homes and lives. Real stories, real satisfaction.
-          </p>
-        </div>
-
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {reviews.map((review) => (
-            <div
-              key={review.id}
-              className="relative mt-8 group"
-            >
-              {/* Profile Picture - Overlapping the top of the card, with hover animation */}
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20 transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
-                <img
-                  src={review.image}
-                  alt={review.name}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-lg"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                />
-              </div>
-
-              {/* Review Card with hover effect */}
+            {slidesData.map((slide, index) => (
               <div
-                className="relative w-full px-6 py-8 pt-12 text-center h-80 flex flex-col transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105 group-hover:shadow-2xl group-hover:bg-[#b7c3d6]"
-                style={{ backgroundColor: '#c8d1e0', fontFamily: "'Inter', sans-serif" }}
+                key={index}
+                className="relative w-full flex-shrink-0 h-[520px] sm:h-[600px] lg:h-[720px]"
               >
-                {/* Inner decorative border */}
-                <div className="absolute top-4 left-4 right-4 bottom-4 border border-white"></div>
+                {/* BACKGROUND IMAGE */}
+                <img
+                  src={slide.bg}
+                  alt={`Review ${index + 1}`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
 
-                {/* Content */}
-                <div className="relative z-10 flex flex-col h-full justify-between">
-                  {/* Name */}
-                  <h3 className="text-lg font-medium text-gray-800 mb-4 mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {review.name}
-                  </h3>
+                {/* REVIEW CARD */}
+                <div
+                  className="
+                    absolute
+                    w-[90%]
+                    max-w-[360px]
+                    left-1/2
+                    -translate-x-1/2
+                    bottom-10
 
-                  {/* Content Area */}
-                  <div className="flex-1 flex flex-col justify-center space-y-4">
-                    {/* Title */}
-                    <p className="text-gray-800 font-semibold text-sm leading-5" style={{ fontFamily: "'Playfair Display', serif" }}>
-                      {review.title}
-                    </p>
+                    lg:left-auto
+                    lg:right-20
+                    lg:top-1/2
+                    lg:bottom-auto
+                    lg:-translate-x-0
+                    lg:-translate-y-1/2
+                    group
+                  "
+                >
+                  <div className="relative bg-[#cfd8e4] py-12 px-10 transition-all duration-500 ease-out group-hover:shadow-2xl">
+                    {/* LOGO */}
+                    <div className="absolute -top-12 left-1/2 -translate-x-1/2">
+                      <img
+                        src={slide.logo}
+                        alt={slide.company}
+                        className="w-24 h-24 rounded-full border-4 border-white bg-white object-contain"
+                      />
+                    </div>
 
-                    {/* Review Text */}
-                    <p className="text-gray-800 text-xs leading-4" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      {review.text}
-                    </p>
-                  </div>
+                    {/* INNER CONTENT */}
+                    <div className="border border-white px-8 py-10 text-center space-y-6">
+                      <h3 className="font-serif text-2xl text-neutral-900">
+                        {slide.name}
+                      </h3>
 
-                  {/* Stars */}
-                  <div className="flex justify-center gap-1 mt-4">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-gray-800 text-base" style={{ fontFamily: "'Playfair Display', serif" }}>★</span>
-                    ))}
+                      <p className="font-serif font-semibold text-neutral-900">
+                        {slide.company}
+                      </p>
+
+                      <p className="text-sm text-neutral-700 leading-relaxed">
+                        {slide.review}
+                      </p>
+
+                      {/* ⭐ STARS */}
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8"></div>
+                     
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* NAV */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-3 rounded-full hover:bg-white transition"
+          >
+            <ChevronLeft />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-3 rounded-full hover:bg-white transition"
+          >
+            <ChevronRight />
+          </button>
         </div>
-      </div>
+      </section>
+
+      {/* KEYFRAMES */}
+      <style>
+        {`
+          @keyframes fadeUp {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}
+      </style>
     </div>
   );
-};
-
-export default Review;
+}
