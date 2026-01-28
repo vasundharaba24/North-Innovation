@@ -74,7 +74,6 @@ const AboutUsSection = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
