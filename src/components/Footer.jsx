@@ -3,7 +3,7 @@ import logo from '../assests/North Curations (main).png'; // <-- update path to 
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
-        <footer className="bg-stone-200 border-t border-stone-300 py-12">
+        <footer className="bg-[#cfd8e4] border-t border-stone-300 py-12">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-8">
                     {/* Company Info */}

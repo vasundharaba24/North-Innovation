@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import Image1 from '../assests/Image1.jpg'
 import Image2 from '../assests/Image2.jpg'
 // import bg3 from '../assests/bg3.png'
-// import image from '../assests/image.JPG'
+import image from '../assests/image.JPG'
 // import PS1 from '../assests/PS1.JPG'
 // import PS2 from '../assests/PS2.JPG'
 // import PS3 from '../assests/PS3.JPG'
@@ -23,56 +23,65 @@ const slides = [
 	(
 		<div className="flex h-full">
 			{/* Main Content Area */}
-			<div
-				className="flex-1 relative"
-				style={{
-					background: 'linear-gradient(135deg, #6884AA 0%, #8fa4c4 100%)',
-				}}
-			>
-				{/* Background Pattern */}
-				<div className="absolute inset-0 opacity-10">
-					<div className="absolute top-20 left-20 w-32 h-32 border border-white rounded-full"></div>
-					<div className="absolute bottom-32 right-32 w-24 h-24 border border-white rounded-full"></div>
-					<div className="absolute top-1/2 left-1/3 w-16 h-16 border border-white rounded-full"></div>
+			<div className="flex-1 relative overflow-hidden min-h-screen">
+				{/* Background Image */}
+				<div
+					className="absolute inset-0 bg-cover bg-center"
+					style={{
+					backgroundImage: "url('" + Image2 + "')",
+					}}
+				/>
+
+				{/* Blur Overlay */}
+				<div
+					className="absolute inset-0"
+					style={{
+					backdropFilter: 'blur(5px)',
+					WebkitBackdropFilter: 'blur(5px)', // Safari
+					backgroundColor: 'rgba(0, 0, 0, 0.25)', // controls darkness
+					}}
+				/>
+
+				{/* Decorative Circles */}
+				<div className="absolute inset-0 opacity-20 pointer-events-none z-10">
+					<div className="absolute top-20 left-20 w-32 h-32 border border-white/40 rounded-full"></div>
+					<div className="absolute bottom-32 right-32 w-24 h-24 border border-white/40 rounded-full"></div>
+					<div className="absolute top-1/2 left-1/3 w-16 h-16 border border-white/40 rounded-full"></div>
 				</div>
-				{/* Main Content */}
-				<div className="relative z-10 h-full flex items-center justify-center">
+
+				{/* Content */}
+				<div className="relative z-20 h-full flex items-center justify-center">
 					<div className="text-center text-white max-w-2xl px-8">
-						<div className="mb-6">
-							<p
-								className="text-sm font-medium tracking-widest opacity-90 mb-2"
-								style={{ fontFamily: 'Inter, sans-serif' }}
-							>
-								CORPORATE GIFFTING
-							</p>
-							<h1
-								className="text-6xl md:text-7xl font-light mb-6"
-								style={{
-									fontFamily: 'Playfair Display, serif',
-									lineHeight: 0.95,
-								}}
-							>
-								CURATED
-								<br />
-								PERFECTION
-							</h1>
-							<p
-								className="text-2xl font-light mb-8 opacity-90"
-								style={{ fontFamily: 'Cormorant Garamond, serif' }}
-							>
-								Crafted to reflect your brand’s essence.
-							</p>
-						</div>
-						<Link to={'/Explore'}>
-						<button
-							className="bg-white text-slate-800 px-12 py-4 text-sm font-medium tracking-widest hover:bg-stone-100 transition-colors duration-300"
-							style={{ fontFamily: 'Inter, sans-serif' }}
-						>
-							EXPLORE
-						</button>
-						</Link>
+					<p
+						className="text-sm font-medium tracking-widest mb-3 opacity-90"
+						style={{ fontFamily: 'Inter, sans-serif' }}
+					>
+						CORPORATE GIFTING
+					</p>
+
+					<h1
+						className="text-6xl md:text-7xl font-light mb-6"
+						style={{
+						fontFamily: 'Playfair Display, serif',
+						lineHeight: 0.95,
+						textShadow: '0 6px 30px rgba(0,0,0,0.5)',
+						}}
+					>
+						North Curation Thoughtful Gifting
+					</h1>
+
+					<p
+						className="text-2xl font-light opacity-90"
+						style={{
+						fontFamily: 'Cormorant Garamond, serif',
+						textShadow: '0 4px 20px rgba(0,0,0,0.4)',
+						}}
+					>
+						Wrapping Experiences, Not Just Gifts. Rare finds, meaningful combinations, and custom creations with heart and luxury. Every gift is a story waiting to be shared.
+					</p>
 					</div>
 				</div>
+				
 				{/* Decorative Product Elements */}
 				<div className="absolute bottom-10 left-10 opacity-20">
 					{/* <svg
@@ -174,30 +183,25 @@ const slides = [
 						className="text-5xl md:text-6xl font-light mb-6"
 						style={{ fontFamily: 'Playfair Display, serif', lineHeight: 1.1 }}
 					>
-						Thoughtfully
+						Curated Gifting, 
 						<br />
-						Chosen
+						Elevated
 					</h2>
 					<p
 						className="text-xl mb-8 opacity-90"
 						style={{ fontFamily: 'Cormorant Garamond, serif', lineHeight: 1.6 }}
 					>
-						Because the right gift doesn’t just impression, <br></br>
-						it builds connection, culture, and trust.
+						Premium, personalised gifts for celebrations, milestones, and moments. <br></br>
+						Designed to feel intentional, elegant, and uniquely yours.
 					</p>
 					<div className="flex space-x-4">
-						<button
-							className="bg-white text-slate-800 px-10 py-4 text-sm font-medium tracking-widest hover:bg-stone-100 transition-colors duration-300"
-							style={{ fontFamily: 'Inter, sans-serif' }}
-						>
-							EXPLORE COLLECTION
-						</button>
-						<Link to={'/About'}>
+						
+						<Link to={'/Contact'}>
 						<button
 							className="border-2 border-white text-white px-10 py-4 text-sm font-medium tracking-widest hover:bg-white hover:text-slate-800 transition-all duration-300"
 							style={{ fontFamily: 'Inter, sans-serif' }}
 						>
-							LEARN MORE
+							REACH OUT FOR CUSTOM CURATIONS
 						</button>
 						</Link>
 					</div>

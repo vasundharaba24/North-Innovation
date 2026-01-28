@@ -1,8 +1,8 @@
 import React from "react";
 import Indian from "../assests/Indian.png";
-import Bamboo from "../assests/bamboo.png";
 import crok from '../assests/crok.png'
-import reuse from '../assests/Reuse.png'
+import wedding from '../assests/wedding.png'
+import green from '../assests/green_edit.png';
 const ExploreSection3 = () => {
   return (
     <div>
@@ -19,7 +19,7 @@ const ExploreSection3 = () => {
               className="text-5xl md:text-6xl font-light text-slate-800 mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Something unusual
+              The Rare Finds
             </h2>
 
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8"></div>
@@ -28,8 +28,8 @@ const ExploreSection3 = () => {
               className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Every detail considered. Every choice deliberate.
-              Let’s create something that reflects discernment, quality, and quiet confidence.
+              Uncommon pieces with extraordinary charm.
+              Curated for those who love the different.
             </p>
           </div>
         </div>
@@ -46,10 +46,10 @@ const ExploreSection3 = () => {
             </div>
             <div className="p-8 flex flex-col justify-center">
               <h3 className="text-2xl text-slate-800 mb-3 font-light" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Indian Heritage Crafts
+               The Heritage Edit
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Timeless handcrafted pieces that carry legacy, culture, and meaning — gifting that feels rare, personal, and deeply considered.
+                Timeless crafts from across India. Handmade traditions, passed through generations. Curated to preserve culture in every detail.
               </p>
             </div>
           </div>
@@ -57,14 +57,14 @@ const ExploreSection3 = () => {
           {/* Card 2 */}
           <div className="flex bg-white border border-stone-200 rounded-2xl overflow-hidden">
             <div className="w-[320px] h-[350px] flex-shrink-0 bg-stone-100">
-              <img src={Bamboo} alt="Bamboo Giftings" className="w-full h-full object-cover" />
+              <img src={green} alt="Bamboo Giftings" className="w-full h-full object-cover" />
             </div>
             <div className="p-8 flex flex-col justify-center">
               <h3 className="text-2xl text-slate-800 mb-3 font-light" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Bamboo Giftings
+                The Green Edit
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Naturally refined essentials that signal responsibility without compromise — sustainable gifting with elevated taste.
+               Thoughtful gifts, lighter on the earth. Curated with care for people and the planet. Sustainable choices, beautifully presented.
               </p>
             </div>
           </div>
@@ -87,14 +87,14 @@ const ExploreSection3 = () => {
           {/* Card 4 */}
           <div className="flex bg-white border border-stone-200 rounded-2xl overflow-hidden">
             <div className="w-[320px] h-[350px] flex-shrink-0 bg-stone-100">
-              <img src={reuse} alt="Reduce Reuse Recycle" className="w-full h-full object-cover" />
+              <img src={wedding} alt="Reduce Reuse Recycle" className="w-full h-full object-cover" />
             </div>
             <div className="p-8 flex flex-col justify-center">
               <h3 className="text-2xl text-slate-800 mb-3 font-light" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Reduce Reuse Recycle
+                The Vow Collection
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Conscious choices transformed into meaningful gifts — where values, impact, and brand intent quietly align.
+                Gifts that celebrate forever. Designed to honour promises, partnerships, and lifelong togetherness. Timeless keepsakes for timeless bonds.
               </p>
             </div>
           </div>

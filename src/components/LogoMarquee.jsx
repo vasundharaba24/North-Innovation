@@ -11,7 +11,7 @@ import Novo from '../assests/logos/Novo.png';
 import NTPC from '../assests/logos/NTPC.png';
 import ONGC from '../assests/logos/ONGC.png';
 import Sodexo from '../assests/logos/Sodexo.png';
-import Vrukshathon from '../assests/logos/Vrukshathon.png';
+// import Vrukshathon from '../assests/logos/Vrukshathon.png';
 import vultec from '../assests/logos/vultec.png';
 
 const LogoMarquee = () => {
@@ -28,7 +28,7 @@ const LogoMarquee = () => {
     { src: NTPC, alt: 'NTPC' },
     { src: ONGC, alt: 'ONGC' },
     { src: Sodexo, alt: 'Sodexo' },
-    { src: Vrukshathon, alt: 'Vrukshathon' },
+    // { src: Vrukshathon, alt: 'Vrukshathon' },
     { src: vultec, alt: 'Vultec' },
   ];
 
@@ -36,15 +36,24 @@ const LogoMarquee = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <div className="w-full bg-white py-12 overflow-hidden">
+    <div className="w-full bg-white overflow-hidden">
       <div className="relative">
+         <div className="text-center">
+            <p
+              className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mt-2 mb-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Trusted By
+            </p>
+            </div>
         <div className="flex animate-marquee">
+            
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
               className="flex-shrink-0 mx-8 flex items-center justify-center"
               style={{ width: '120px', height: '80px' }}
-            >
+            > 
               <img
                 src={logo.src}
                 alt={logo.alt}
