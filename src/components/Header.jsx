@@ -50,13 +50,12 @@ const Header = () => {
 
           {/* DESKTOP NAV — UNCHANGED */}
           <div className="hidden md:flex items-center space-x-8">
-            <nav className="flex items-center space-x-8 whitespace-nowrap">
-              <Link to="/" className="text-slate-700 hover:text-[#AF4110] transition-colors text-sm font-medium tracking-wide">Home</Link>
-              <Link to="/explore" className="text-slate-700 hover:text-[#AF4110] transition-colors text-sm font-medium tracking-wide">Explore</Link>
-              {/* <Link to="/contact" className="text-slate-700 hover:text-[#AF4110] transition-colors text-sm font-medium tracking-wide">Custom Curations</Link> */}
-              <Link to="/about" className="text-slate-700 hover:text-[#AF4110] transition-colors text-sm font-medium tracking-wide">About</Link>
-              <Link to="/gallery" className="text-slate-700 hover:text-[#AF4110] transition-colors text-sm font-medium tracking-wide">Gallery</Link>
-              <Link to="/contact" className="text-slate-700 hover:text-[#AF4110] transition-colors text-sm font-medium tracking-wide">Contact</Link>
+            <nav className="flex items-center space-x-6 whitespace-nowrap">
+              <Link to="/" className="text-slate-700 hover:text-[#AF4110] transition-colors text-base font-medium tracking-wide">Home</Link>
+              <Link to="/explore" className="text-slate-700 hover:text-[#AF4110] transition-colors text-base font-medium tracking-wide">Explore</Link>
+              <Link to="/about" className="text-slate-700 hover:text-[#AF4110] transition-colors text-base font-medium tracking-wide">About</Link>
+              <Link to="/gallery" className="text-slate-700 hover:text-[#AF4110] transition-colors text-base font-medium tracking-wide">Gallery</Link>
+              <Link to="/contact" className="text-slate-700 hover:text-[#AF4110] transition-colors text-base font-medium tracking-wide">Contact</Link>
             </nav>
           </div>
 

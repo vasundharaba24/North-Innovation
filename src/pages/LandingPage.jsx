@@ -12,7 +12,7 @@ import NShapeCards from '../components/NShapeCards';
 
 const LandingPage = () => {
     return (
-        <div className="bg-stone-50 text-slate-800">
+        <div className="bg-white text-slate-800">
             <Header />
                 <HeroSection />
                 <LogoMarquee />

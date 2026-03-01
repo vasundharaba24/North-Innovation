@@ -11,49 +11,61 @@ import Novo from '../assests/logos/Novo.png';
 import NTPC from '../assests/logos/NTPC.png';
 import ONGC from '../assests/logos/ONGC.png';
 import Sodexo from '../assests/logos/Sodexo.png';
-// import Vrukshathon from '../assests/logos/Vrukshathon.png';
 import vultec from '../assests/logos/vultec.png';
+import skytown from '../assests/logos/skytown.png';
+import doctorsand from '../assests/logos/doctor-sand.png';
 
 const LogoMarquee = () => {
   const logos = [
     { src: Academic, alt: 'Academic' },
-    { src: BrandRaga, alt: 'BrandRaga' },
+    // { src: BrandRaga, alt: 'BrandRaga' },
     { src: Custara, alt: 'Custara' },
     { src: educational, alt: 'Educational' },
+    { src: doctorsand, alt: 'Doctor sand' },
     { src: Evotek, alt: 'Evotek' },
     { src: Inspire, alt: 'Inspire' },
     { src: American_express, alt: 'American Express' },
     { src: Kotak, alt: 'Kotak' },
     { src: Novo, alt: 'Novo' },
     { src: NTPC, alt: 'NTPC' },
+    { src: skytown, alt: 'skytown' },
     { src: ONGC, alt: 'ONGC' },
     { src: Sodexo, alt: 'Sodexo' },
-    // { src: Vrukshathon, alt: 'Vrukshathon' },
     { src: vultec, alt: 'Vultec' },
+
   ];
 
-  // Duplicate logos for infinite scroll effect
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <div className="w-full bg-white overflow-hidden">
+    <div className="w-full bg-white overflow-hidden py-12 md:py-7">
+
+      {/* TOP FULL WIDTH LINE */}
+  
+
       <div className="relative">
-         <div className="text-center">
-            <p
-              className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mt-2 mb-2"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              Trusted By
-            </p>
-            </div>
-        <div className="flex animate-marquee">
-            
+
+        {/* Heading */}
+        <div className="text-center mb-14 md:mb-20 mt-2">
+          <h2
+            className="text-3xl md:text-5xl font-semibold text-slate-800"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Trusted By
+          </h2>
+
+       
+        </div>
+
+        {/* Marquee */}
+        <div className="flex animate-marquee items-center py-5">
+
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-8 flex items-center justify-center"
-              style={{ width: '120px', height: '80px' }}
-            > 
+              className="flex-shrink-0 mx-8 md:mx-14 flex items-center justify-center"
+              style={{ width: '140px', height: '80px' }}  // 🔥 Increased size
+            >
               <img
                 src={logo.src}
                 alt={logo.alt}
@@ -62,9 +74,11 @@ const LogoMarquee = () => {
               />
             </div>
           ))}
+
         </div>
       </div>
 
+      {/* BOTTOM FULL WIDTH LINE */}
       <style>{`
         @keyframes marquee {
           0% {
@@ -76,13 +90,32 @@ const LogoMarquee = () => {
         }
 
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 22s linear infinite;
         }
 
         .animate-marquee:hover {
           animation-play-state: paused;
         }
+
+        @keyframes shine {
+          0% {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+        }
+
+        .animate-shine {
+          animation: shine 2s ease-in-out infinite;
+        }
       `}</style>
+
     </div>
   );
 };

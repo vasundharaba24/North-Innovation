@@ -19,7 +19,6 @@ import G14 from "../assests/gallery/G14.JPG";
 import G15 from "../assests/gallery/G15.JPG";
 import G16 from "../assests/gallery/G16.JPG";
 import G17 from "../assests/gallery/G17.JPG";
-import G18 from "../assests/gallery/G18.JPG";
 import G19 from "../assests/gallery/G19.JPG";
 
 export default function PhotoGallery() {
@@ -38,89 +37,101 @@ export default function PhotoGallery() {
             >
               Curations by North
             </h2>
+
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-2"></div>
+
             <p
               className="text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Custom-crafted pieces designed to feel personal,<br></br> uniquely yours, and timeless.
+              Custom-crafted pieces designed to feel personal,
+              <br />
+              uniquely yours, and timeless.
             </p>
           </div>
 
-          {/* GALLERY GRID */}
-          <div className="grid grid-cols-12 gap-6">
+          <div className="space-y-16">
 
-            {/* ===== ROW 1 ===== */}
-            <div className="col-span-12 lg:col-span-7 h-[420px] overflow-hidden">
-              <img src={G8} className="w-full h-full object-cover" />
-            </div>
+            {/* ===== SECTION 1 ===== */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-            <div className="col-span-12 lg:col-span-5 grid grid-cols-2 gap-6">
-              <div className="h-[200px] overflow-hidden">
-                <img src={G2} className="w-full h-full object-cover" />
+              {/* Big Image */}
+              <div className="lg:col-span-7 h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden">
+                <img src={G8} className="w-full h-full object-cover" />
               </div>
-              <div className="h-[200px] overflow-hidden">
-                <img src={G3} className="w-full h-full object-cover" />
-              </div>
-              <div className="h-[200px] overflow-hidden">
-                <img src={G4} className="w-full h-full object-cover" />
-              </div>
-              <div className="h-[200px] overflow-hidden">
-                <img src={G9} className="w-full h-full object-cover" />
-              </div>
-            </div>
 
-            {/* ===== ROW 2 ===== */}
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G6} className="w-full h-full object-cover" />
-            </div>
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G7} className="w-full h-full object-cover" />
-            </div>
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G1} className="w-full h-full object-cover" />
+              {/* 2 Vertical (Desktop) | 2 Column (Tablet) */}
+              <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                <div className="h-[220px] sm:h-[260px] lg:h-[240px] overflow-hidden">
+                  <img src={G2} className="w-full h-full object-cover" />
+                </div>
+                <div className="h-[220px] sm:h-[260px] lg:h-[240px] overflow-hidden">
+                  <img src={G3} className="w-full h-full object-cover" />
+                </div>
+              </div>
+
+              {/* Bottom 2 Full Width */}
+              <div className="col-span-1 lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="h-[240px] sm:h-[280px] lg:h-[300px] overflow-hidden">
+                  <img src={G4} className="w-full h-full object-cover" />
+                </div>
+                <div className="h-[240px] sm:h-[280px] lg:h-[300px] overflow-hidden">
+                  <img src={G9} className="w-full h-full object-cover" />
+                </div>
+              </div>
+
             </div>
 
-            {/* ===== ROW 3 (SAME PATTERN CONTINUES) ===== */}
-            <div className="col-span-12 lg:col-span-7 h-[420px] overflow-hidden">
-              <img src={G5} className="w-full h-full object-cover" />
+            {/* ===== SECTION 2 ===== */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+              <div className="lg:col-span-7 h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden">
+                <img src={G5} className="w-full h-full object-cover" />
+              </div>
+
+              <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                <div className="h-[220px] sm:h-[260px] lg:h-[240px] overflow-hidden">
+                  <img src={G10} className="w-full h-full object-cover" />
+                </div>
+                <div className="h-[220px] sm:h-[260px] lg:h-[240px] overflow-hidden">
+                  <img src={G11} className="w-full h-full object-cover" />
+                </div>
+              </div>
+
+              <div className="col-span-1 lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="h-[240px] sm:h-[280px] lg:h-[300px] overflow-hidden">
+                  <img src={G12} className="w-full h-full object-cover" />
+                </div>
+                <div className="h-[240px] sm:h-[280px] lg:h-[300px] overflow-hidden">
+                  <img src={G13} className="w-full h-full object-cover" />
+                </div>
+              </div>
+
             </div>
 
-            <div className="col-span-12 lg:col-span-5 grid grid-cols-2 gap-6">
-              <div className="h-[200px] overflow-hidden">
-                <img src={G10} className="w-full h-full object-cover" />
-              </div>
-              <div className="h-[200px] overflow-hidden">
-                <img src={G11} className="w-full h-full object-cover" />
-              </div>
-              <div className="h-[200px] overflow-hidden">
-                <img src={G12} className="w-full h-full object-cover" />
-              </div>
-              <div className="h-[200px] overflow-hidden">
-                <img src={G13} className="w-full h-full object-cover" />
-              </div>
-            </div>
+            {/* ===== SECTION 3 ===== */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            {/* ===== ROW 4 ===== */}
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G14} className="w-full h-full object-cover" />
-            </div>
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G15} className="w-full h-full object-cover" />
-            </div>
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G16} className="w-full h-full object-cover" />
-            </div>
+              <div className="h-[240px] sm:h-[260px] lg:h-[300px] overflow-hidden">
+                <img src={G14} className="w-full h-full object-cover" />
+              </div>
 
-            {/* ===== FINAL ROW ===== */}
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G17} className="w-full h-full object-cover" />
-            </div>
-            {/* <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G18} className="w-full h-full object-cover" />
-            </div> */}
-            <div className="col-span-12 lg:col-span-4 h-[260px] overflow-hidden">
-              <img src={G19} className="w-full h-full object-cover" />
+              <div className="h-[240px] sm:h-[260px] lg:h-[300px] overflow-hidden">
+                <img src={G15} className="w-full h-full object-cover" />
+              </div>
+
+              <div className="h-[240px] sm:h-[260px] lg:h-[300px] overflow-hidden">
+                <img src={G16} className="w-full h-full object-cover" />
+              </div>
+
+              <div className="h-[240px] sm:h-[280px] lg:h-[300px] overflow-hidden">
+                <img src={G17} className="w-full h-full object-cover" />
+              </div>
+
+              <div className="h-[240px] sm:h-[280px] lg:h-[300px] overflow-hidden sm:col-span-1 lg:col-span-2">
+                <img src={G19} className="w-full h-full object-cover" />
+              </div>
+
             </div>
 
           </div>

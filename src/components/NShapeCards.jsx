@@ -1,96 +1,85 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import img1 from "../assests/founder/about.jpg";
+import img2 from "../assests/founder/image.png";
+import img3 from "../assests/founder/Founder pic 1.jpg";
 
-// Image imports
-import PS1 from "../assests/Image1.jpg";
-import PS2 from "../assests/Image2.jpg";
-import PS3 from "../assests/art.jpg";
-
-const cards = [
-  {
-    id: 1,
-    title: "ABOUT FOUNDER",
-    text: `Rashmi Shivkumar
-Founder, NORTH CURATIONS
-
-Born in Vijayapura and trained at NIFT Mumbai, Rashmi began her journey creating sustainable, artisan-led fashion with her brand RAEH. What started as a passion for conscious design soon evolved into a deeper calling — crafting thoughtful, personal, and premium gifting experiences.
-
-A side venture into corporate gifting revealed the power of meaningful curation, storytelling, and emotional connection. Today, NORTH CURATIONS reflects that journey with creativity, integrity, and refined attention to detail.`,
-    image: PS1,
-  },
-  {
-    id: 2,
-    title: "ABOUT NORTH",
-    text: `North Curations is where gifting meets intention, emotion, and refined storytelling. Inspired by the idea of a compass, the name reflects guidance and purpose.
-
-We don’t simply customize gifts — we curate experiences. From ideation to delivery, every detail is handled with care, precision, and quiet luxury.`,
-    image: PS2,
-  },
-  {
-    id: 3,
-    title: "WHY US",
-    text: `Because exceptional gifting is never accidental — it is designed.
-
-From sourcing to execution, we create thoughtful, elevated gifting experiences that leave a lasting impression.`,
-    image: PS3,
-  },
-];
-
-export default function NShapedFounderCards() {
+export default function EditorialArchesDesktop() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-28">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-        {cards.map((card) => (
-          <div key={card.id} className="flex justify-center">
-            {/* N-SHAPED CARD */}
-            <div
-              className="w-full max-w-[340px] bg-white border border-slate-200 overflow-hidden"
-              style={{ borderRadius: "160px 160px 16px 16px" }}
-            >
-              {/* IMAGE — CORRECT SIZE */}
-              <div
-                className="relative h-[360px] m-6 overflow-hidden"
-                style={{ borderRadius: "140px 140px 0px 0px" }}
-              >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                />
+    <section className="w-full bg-white mt-9">
+      <div className="flex flex-col md:flex-row w-full">
 
-                {/* INNER WHITE ARCH */}
-                <div
-                  className="absolute inset-[16px] pointer-events-none"
-                  style={{
-                    borderLeft: "2px solid white",
-                    borderRight: "2px solid white",
-                    borderTop: "2px solid white",
-                    borderBottom: "none",
-                    borderRadius: "125px 125px 0 0",
-                  }}
-                />
-              </div>
+        <ArchFrame src={img1} id="one" title="Why Us" />
+        <ArchFrame src={img2} id="two" title="About Us?" />
+        <ArchFrame src={img3} id="three" title="About Founder" />
 
-              {/* TEXT — LEFT ALIGNED, READABLE */}
-              <div className="px-8 pb-10">
-                <h3
-                  className="text-xl font-light mb-4 text-slate-900 text-left"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {card.title}
-                </h3>
-
-                <div
-                  className="text-slate-600 text-sm leading-relaxed space-y-4 whitespace-pre-line text-left"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  {card.text}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
+  );
+}
+
+/* -------------------------------- */
+
+function ArchFrame({ src, id, title }) {
+  return (
+    <div className="relative w-full md:w-1/3">
+
+      {/* Maintain perfect arch ratio */}
+      <div className="relative w-full aspect-[400/590]">
+
+        <svg
+          viewBox="10 0 400 590"
+          className="absolute inset-0 w-full h-full"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <defs>
+            <clipPath id={`perfectArch-${id}`}>
+              <path
+                d="
+                  M 20 240
+                  C 20 110, 120 20, 210 20
+                  C 300 20, 400 110, 400 240
+                  L 400 620
+                  L 20 620
+                  Z
+                "
+              />
+            </clipPath>
+          </defs>
+
+          <image
+            href={src}
+            width="400"
+            height="590"
+            preserveAspectRatio="xMidYMid slice"
+            clipPath={`url(#perfectArch-${id})`}
+          />
+        </svg>
+
+        {/* WHITE STRAP */}
+        <Link
+          to="/about"
+          className="
+            absolute
+            bottom-0
+            left-0
+            right-0
+            bg-white
+            py-3 md:py-4
+            text-center
+            text-black
+            text-sm md:text-base
+            font-medium
+            tracking-wide
+            z-20
+            transition-all duration-300
+            hover:bg-[#AF4110] hover:text-white
+          "
+        >
+          {title}
+        </Link>
+
+      </div>
+    </div>
   );
 }

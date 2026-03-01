@@ -9,8 +9,8 @@ import slide4 from "../assests/I2.png";
 
 
 import logoAmex from "../assests/logos/American_express.png";
-import logoDoctor from "../assests/logos/Sodexo.png";
-import logoBrandRaga from "../assests/logos/BrandRaga.png";
+import logoDoctor from "../assests/logos/doctor-sand.png";
+import logoskytown from "../assests/logos/skytown.png";
 
 
 
@@ -35,18 +35,18 @@ const slidesData = [
     bg: slide3,
     name: "Saanvikaa Kabadi",
     company: "Skytown Group",
-    logo: logoAmex,
+    logo: logoskytown,
     review:
       "Excellent service.",
   },
-  {
-    bg: slide4,
-    name: "Shiv Mamadapur",
-    company: "Brand Raga",
-    logo: logoBrandRaga,
-    review:
-      "Best services, reliable and on time. Its the best experience, the variety of products and the timeline are very on time",
-  },
+  // {
+  //   bg: slide4,
+  //   name: "Shiv Mamadapur",
+  //   company: "Brand Raga",
+  //   logo: logoBrandRaga,
+  //   review:
+  //     "Best services, reliable and on time. Its the best experience, the variety of products and the timeline are very on time",
+  // },
 ];
 
 export default function ReviewSlider() {
@@ -67,25 +67,24 @@ export default function ReviewSlider() {
   return (
     <div className="animate-[fadeUp_0.8s_ease-out]">
       {/* HEADER */}
-      <div className="text-center mb-20 mt-20 px-6">
+      <div className="text-center mb-12 md:mb-20 mt-12 md:mt-20 px-4 md:px-6">
         <p
-          className="text-sm font-medium tracking-widest text-slate-600 mb-4"
-          style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.25em" }}
+          className="text-sm md:text-lg font-medium tracking-widest text-slate-600 mb-2 md:mb-4"
         >
           WHAT CLIENTS SAY
         </p>
 
         <h2
-          className="text-5xl md:text-6xl font-light text-slate-800 mb-6"
-          style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.1 }}
+          className="text-3xl md:text-5xl lg:text-6xl font-semibold text-slate-800 mb-4 md:mb-6"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           The North Experience
         </h2>
 
-        <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8" />
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-6 md:mb-8" />
 
         <p
-          className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-2xl text-slate-600 max-w-xl mx-auto"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           From first glance to final unwrapping, our clients share their journey
@@ -104,7 +103,7 @@ export default function ReviewSlider() {
             {slidesData.map((slide, index) => (
               <div
                 key={index}
-                className="relative w-full flex-shrink-0 h-[520px] sm:h-[600px] lg:h-[720px]"
+                className="relative w-full flex-shrink-0 h-[420px] sm:h-[500px] md:h-[520px] lg:h-[600px] xl:h-[720px]"
               >
                 {/* BACKGROUND IMAGE */}
                 <img
@@ -117,11 +116,11 @@ export default function ReviewSlider() {
                 <div
                   className="
                     absolute
-                    w-[90%]
-                    max-w-[360px]
+                    w-[85%]
+                    max-w-[300px] md:max-w-[360px]
                     left-1/2
                     -translate-x-1/2
-                    bottom-10
+                    bottom-4 md:bottom-10
 
                     lg:left-auto
                     lg:right-20
@@ -132,32 +131,34 @@ export default function ReviewSlider() {
                     group
                   "
                 >
-                  <div className="relative bg-[#cfd8e4] py-12 px-10 transition-all duration-500 ease-out group-hover:shadow-2xl">
+                  <div className="relative bg-[#cfd8e4] py-8 md:py-12 px-6 md:px-10 transition-all duration-500 ease-out group-hover:shadow-2xl">
                     {/* LOGO */}
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2">
+                    <div className="absolute -top-10 md:-top-12 left-1/2 -translate-x-1/2">
                       <img
                         src={slide.logo}
                         alt={slide.company}
-                        className="w-24 h-24 rounded-full border-4 border-white bg-white object-contain"
+                        className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-2 md:border-4 border-white bg-white object-contain"
                       />
                     </div>
 
                     {/* INNER CONTENT */}
-                    <div className="border border-white px-8 py-10 text-center space-y-6">
-                      <h3 className="font-serif text-2xl text-neutral-900">
+                    <div className="border border-white px-4 md:px-8 py-6 md:py-10 text-center space-y-3 md:space-y-6">
+                      <h3 className="text-base md:text-xl font-medium text-neutral-900">
                         {slide.name}
                       </h3>
 
-                      <p className="font-serif font-semibold text-neutral-900">
+                      <p className="text-lg md:text-2xl font-extrabold text-neutral-900" 
+                      style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 'bold' }}>
                         {slide.company}
                       </p>
 
-                      <p className="text-sm text-neutral-700 leading-relaxed">
+                      <p className="text-sm md:text-lg text-neutral-700 leading-relaxed"
+                      style={{ fontFamily: "'Cormorant Garamond', serif"}}>
                         {slide.review}
                       </p>
 
                       {/* ⭐ STARS */}
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8"></div>
+          <div className="w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-4 md:mb-8"></div>
                      
                     </div>
                   </div>
@@ -169,16 +170,16 @@ export default function ReviewSlider() {
           {/* NAV */}
           <button
             onClick={prevSlide}
-            className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-3 rounded-full hover:bg-white transition"
+            className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-2 md:p-3 rounded-full hover:bg-white transition"
           >
-            <ChevronLeft />
+            <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-3 rounded-full hover:bg-white transition"
+            className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-2 md:p-3 rounded-full hover:bg-white transition"
           >
-            <ChevronRight />
+            <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
           </button>
         </div>
       </section>

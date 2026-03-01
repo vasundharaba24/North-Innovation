@@ -185,37 +185,34 @@ const differentiators = [
 ];
 
 const DifferentiatorsSection = () => (
-  <section className="w-full py-20 bg-white">
-    <div className="max-w-7xl mx-auto px-8">
-    <div className="text-center mb-20">
+  <section className="w-full py-12 md:py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <div className="text-center mb-12 md:mb-20">
 
   <h2
-    className="text-5xl md:text-6xl font-light text-slate-800 mb-6"
-    style={{
-      fontFamily: "'Playfair Display', serif",
-      lineHeight: 1.1,
-    }}
+    className="text-3xl md:text-5xl lg:text-6xl font-semibold text-slate-800 mb-4 md:mb-6"
+    style={{ fontFamily: "'Cormorant Garamond', serif" }}
   >
     The North way
   </h2>
 
-  <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8" />
+  <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-6 md:mb-8" />
 
   <p
-    className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+    className="text-lg md:text-2xl text-slate-600 max-w-xl mx-auto"
     style={{ fontFamily: "'Cormorant Garamond', serif" }}
   >
-    Playful elegance. Premium finish. That’s our signature in every box.
+    Playful elegance. Premium finish. That's our signature in every box.
   </p>
 </div>
 
 
-      <div className="bg-[#F4F1ED] backdrop-blur-sm rounded-3xl px-12 py-16">
-        <div className="flex flex-wrap justify-center gap-12">
+      <div className="bg-[#F4F1ED] backdrop-blur-sm rounded-2xl md:rounded-3xl px-6 md:px-12 py-8 md:py-16">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
           {differentiators.map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center w-[170px]">
-              <div className="mb-6">{item.icon}</div>
-              <div className="text-center text-lg font-medium text-gray-900">
+            <div key={idx} className="flex flex-col items-center w-[130px] md:w-[170px]">
+              <div className="mb-4 md:mb-6 scale-75 md:scale-100">{item.icon}</div>
+              <div className="text-center text-sm md:text-lg font-medium text-gray-900">
                 {item.label}
               </div>
             </div>

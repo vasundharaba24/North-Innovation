@@ -39,56 +39,62 @@ const Contact = () => {
         }}
       />
 
-      <section className="relative py-24">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="relative py-12 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
 
           {/* Heading */}
-          <div className="text-center mb-20">
-            <p className="text-lg font-medium tracking-widest text-slate-600 mb-4">
+          <div className="text-center mb-12 md:mb-20">
+            <p className="text-base md:text-lg font-medium tracking-widest text-slate-600 mb-3 md:mb-4">
               WE ARE JUST A
             </p>
 
             <h2
-              className="text-5xl md:text-6xl font-semibold text-slate-800 mb-6"
+              className="text-3xl md:text-5xl lg:text-6xl font-semibold text-slate-800 mb-4 md:mb-6"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               hello away!
             </h2>
 
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-8"></div>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-stone-400 to-transparent mx-auto mb-6 md:mb-8"></div>
 
             <p
-              className="text-2xl text-slate-600 max-w-xl mx-auto"
+              className="text-lg md:text-2xl text-slate-600 max-w-xl mx-auto"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              A few details from you, <br></br> a beautiful curation from us. <br></br> <br></br>Let’s begin a gifting experience that delights every time.
+              A few details from you,
+              <br />
+              a beautiful curation from us.
+              <br /><br />
+              Let's begin a gifting experience that delights every time.
             </p>
           </div>
 
           {/* Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-14 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-14 items-stretch">
 
             {/* Contact Card */}
             <div className="lg:col-span-2 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-100/40 to-transparent rounded-3xl blur-xl" />
 
-              <div className="relative bg-white/80 backdrop-blur rounded-3xl shadow-xl p-10 h-full flex flex-col justify-between border border-stone-200">
+              <div className="relative bg-white/80 backdrop-blur rounded-3xl shadow-xl p-6 md:p-10 h-full flex flex-col justify-between border border-stone-200">
 
                 <div className="space-y-8 text-stone-700">
 
+                  {/* Email */}
                   <div>
                     <p className="text-xs uppercase tracking-widest text-stone-400 mb-2">
                       Email
                     </p>
                     <a
                       href="mailto:rashmi@northcurations.com"
-                      className="flex items-center gap-4 text-lg hover:text-orange-500 transition"
+                      className="flex items-center gap-4 text-base md:text-lg transition hover:text-orange-500"
                     >
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-5 h-5 text-[#EA4335]" />
                       rashmi@northcurations.com
                     </a>
                   </div>
 
+                  {/* WhatsApp */}
                   <div>
                     <p className="text-xs uppercase tracking-widest text-stone-400 mb-2">
                       WhatsApp
@@ -97,23 +103,28 @@ const Contact = () => {
                       href="https://wa.me/918451852445"
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-4 text-lg hover:text-orange-500 transition"
+                      className="flex items-center gap-4 text-base md:text-lg transition hover:text-orange-500"
                     >
-                      <FaWhatsapp className="w-5 h-5" />
+                      <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
                       +91 84518 52445
                     </a>
                   </div>
 
+                  {/* Phone */}
                   <div>
                     <p className="text-xs uppercase tracking-widest text-stone-400 mb-2">
                       Phone
                     </p>
-                    <p className="text-lg hover:text-orange-500 transition cursor-pointer">
+
+                    <div className="flex items-center gap-4 text-base md:text-lg transition hover:text-orange-500 cursor-pointer">
+                      <Phone className="w-5 h-5 text-emerald-600" />
                       +91 84518 52445
-                    </p>
-                    <p className="text-lg hover:text-orange-500 transition cursor-pointer">
+                    </div>
+
+                    <div className="flex items-center gap-4 text-base md:text-lg transition hover:text-orange-500 cursor-pointer">
+                      <Phone className="w-5 h-5 text-emerald-600" />
                       +91 98444 35492
-                    </p>
+                    </div>
                   </div>
                 </div>
 
@@ -122,12 +133,24 @@ const Contact = () => {
                   <p className="text-xs tracking-widest text-stone-400">
                     FOLLOW US
                   </p>
+
                   <div className="flex gap-6 text-stone-500">
-                    <a className="hover:text-orange-500 transition"><Linkedin className="w-5 h-5" /></a>
-                    <a className="hover:text-orange-500 transition"><Facebook className="w-5 h-5" /></a>
-                    <a className="hover:text-orange-500 transition"><Instagram className="w-5 h-5" /></a>
+
+                    <a className="hover:text-orange-500 transition cursor-pointer">
+                      <Linkedin className="w-5 h-5 text-[#0A66C2]" />
+                    </a>
+
+                    <a className="hover:text-orange-500 transition cursor-pointer">
+                      <Facebook className="w-5 h-5 text-[#1877F2]" />
+                    </a>
+
+                    <a className="hover:text-orange-500 transition cursor-pointer">
+                      <Instagram className="w-5 h-5 text-[#E4405F]" />
+                    </a>
+
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -137,12 +160,13 @@ const Contact = () => {
               <iframe
                 title="Office Location"
                 src="https://www.google.com/maps?q=Arekere%20Layout%2C%20DHI%20Office%20Spaces%2C%20Bengaluru%20South%2C%20Karnataka%20560076%2C%20India&output=embed"
-                className="w-full h-full min-h-[460px]"
+                className="w-full h-full min-h-[300px] md:min-h-[460px]"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
               />
             </div>
+
           </div>
         </div>
       </section>
